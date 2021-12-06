@@ -20,16 +20,19 @@ let myCollection = [
 
   function describeItem(item){
     
-    if (item.count < 1){
-      console.log(`I have a ${item.name} and here's what I like about it ${item.whatILike}`)
+    if (item.count === 1){
+      return console.log(`I have a ${item.name} and here's what I like about it ${item.whatILike}`)
+    } else {
+      return console.log(`I have ${item.count} ${item.name}'s and here's what I like about them ${item.name}`)
     }
   }
 
-let item = {name: "School of Code mug",
-count: 1,
-whatILike: "It has my cute pixel character on it!"}
 
-console.log(describeItem(item))
+console.log(describeItem({
+  name: "School of Code hat",
+  count: 2,
+  whatILike: "An often overlooked fashion accessory"
+}))
 
 
 
